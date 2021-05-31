@@ -1,0 +1,32 @@
+{
+  "AutoRemove": true,
+  "Command": ["sleep", "42"],
+  "CreatedAt": "2 hours ago",
+  "Exited": false,
+  "ExitedAt": -62135596800,
+  "ExitCode": 0,
+  "Id": "3011a928b2b4d442c5a81eb662ec6eef13c96ca9055a71a9631dabf9cd913f36",
+  "Image": "localhost/podenv/silverkube-34",
+  "ImageID": "3aca9311d4486c402586f24f1cdfcb8454043ba0fc334dd3f50029a52a7875c7",
+  "IsInfra": false,
+  "Labels": {
+    "io.buildah.version": "1.20.1",
+    "license": "MIT",
+    "name": "fedora",
+    "vendor": "Fedora Project",
+    "version": "34"
+  },
+  "Mounts": ["/home/fedora", "/run/user/1000/wayland-0"],
+  "Names": ["testy"],
+  "Namespaces": {},
+  "Networks": null,
+  "Pid": 13275,
+  "Pod": "",
+  "PodName": "",
+  "Ports": null,
+  "Size": null,
+  "StartedAt": 1622409842,
+  "State": "running",
+  "Status": "Up 2 hours ago",
+  "Created": 1622409842
+}
