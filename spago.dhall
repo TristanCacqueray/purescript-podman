@@ -12,11 +12,13 @@ to generate this file without the comments in this block.
 -}
 { name = "my-project"
 , dependencies =
-  [ "argonaut-codecs"
+  [ "aff"
+  , "argonaut-codecs"
   , "argonaut-core"
-  , "console"
   , "effect"
   , "either"
+  , "foldable-traversable"
+  , "gjs"
   , "maybe"
   , "node-buffer"
   , "node-fs"
@@ -25,6 +27,8 @@ to generate this file without the comments in this block.
   , "psci-support"
   , "test-unit"
   ]
-, packages = ./packages.dhall
+, packages =
+    ./packages.dhall
+  with gjs = ../../purescript-gjs/purescript-gjs/spago.dhall as Location
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
 }

@@ -2,7 +2,7 @@ module Podman.Container (Container(..)) where
 
 import Prelude
 import Data.Argonaut.Decode (class DecodeJson, decodeJson, (.:))
-import Data.NonEmpty (NonEmpty)
+import Data.NonEmpty (NonEmpty(..), head)
 
 data Container
   = Container
@@ -20,3 +20,6 @@ instance decodeContainer :: DecodeJson Container where
     names <- obj .: "Names"
     mounts <- obj .: "Mounts"
     pure $ Container { command, id, names, mounts }
+
+instance showContainer :: Show Container where
+  show (Container container) = "Container {" <> container.id <> ": " <> head container.names <> " [" <> show container.command <> "]}"
